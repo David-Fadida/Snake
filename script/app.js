@@ -22,9 +22,9 @@ function setup() {
     window.setInterval(() => {
         clearWindow();
         fruit.draw();
-        tunnel.draw();
         snake.update();
         snake.draw();
+        tunnel.draw();
         snake.hit();
         specialEvents();
     }, 150);

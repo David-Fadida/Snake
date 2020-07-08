@@ -20,17 +20,20 @@ function Tunnel() {
     }
 
     this.draw = function() {
-        context.fillStyle = '#737579';
-        context.fillRect(this.enter.x, this.enter.y, scale, scale);
+        this.drawTunnel(this.enter);
+        this.drawTunnel(this.exit);
+    }
+
+    this.drawTunnel = function(element) {
+        context.fillStyle = '#FFE07E';
+        context.fillRect(element.x, element.y, scale, scale);
         context.fillStyle = '#0B0D10';
-        context.fillRect(this.enter.x + 2, this.enter.y + 2, scale - 4, scale - 4);
-        context.fillStyle = '#737579';
-        context.fillRect(this.enter.x + 4, this.enter.y + 4, scale - 8, scale - 8);
-        context.fillStyle = '#737579';
-        context.fillRect(this.exit.x, this.exit.y, scale, scale);
+        context.fillRect(element.x + 2, element.y + 2, scale - 4, scale - 4);
+        context.fillStyle = '#FFE07E';
+        context.fillRect(element.x + 4, element.y + 4, scale - 8, scale - 8);
         context.fillStyle = '#0B0D10';
-        context.fillRect(this.exit.x + 2, this.exit.y + 2, scale - 4, scale - 4);
-        context.fillStyle = '#737579';
-        context.fillRect(this.exit.x + 4, this.exit.y + 4, scale - 8, scale - 8);
+        context.fillRect(element.x + 6, element.y + 6, scale - 12, scale - 12);
+        context.fillStyle = '#FFE07E';
+        context.fillRect(element.x + 8, element.y + 8, scale - 16, scale - 16);
     }
 }

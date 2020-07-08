@@ -10,10 +10,11 @@ function Snake() {
 
     // METHODS
     this.draw = function() {
-        context.fillStyle = '#FFFFFF';
+        context.fillStyle = '#125228';
         context.fillRect(this.x, this.y, scale, scale);
         this.tail.forEach(part => {
-            context.fillRect(part.x, part.y, scale, scale);
+            context.fillStyle = '#266B3D';
+            context.fillRect(part.x + 1, part.y + 1, scale - 2, scale - 2);
         });
     }
 

@@ -1,4 +1,9 @@
-#gameWindow
-{
-    background-color: #3E3E3E;
+body {
+    text-align: center;
+    background-color: #1A1B1C;
+}
+#gameWindow {
+    background-color: #0B0D10;
+    margin: auto;
+    border: #0B0D10 solid 5px;
 }
